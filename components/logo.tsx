@@ -15,18 +15,19 @@ export const Logo = (props: React.SVGProps<SVGSVGElement>) => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const slideOffset = -(scrollY * 0.5) // Negative for sliding left
-  const opacity = Math.max(0, 1 - scrollY / 300)
-  const textOpacity = Math.max(0, 1 - scrollY / 200) // Text fades faster
+  const slideOffset = -(scrollY * 0.5)
+  const opacity = Math.max(0, 1 - scrollY / 100)
+  const scale = Math.max(0, 1 - scrollY / 80)
+  const textOpacity = Math.max(0, 1 - scrollY / 80)
 
   return (
     <svg
-      className="w-24 sm:w-28 transition-all duration-500 ease-in-out leading-10 mx-14 md:w-40"
+      className="w-24 sm:w-28 transition-all duration-300 ease-in leading-10 mx-14 md:w-40"
       viewBox="0 0 140 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       style={{
-        transform: `translateX(${slideOffset}px)`,
+        transform: `translateX(${slideOffset}px) scale(${scale})`,
         opacity: opacity,
       }}
       {...props}

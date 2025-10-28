@@ -60,7 +60,7 @@ export function VisionMission() {
   }, [])
 
   return (
-    <section className="py-24 px-4 relative">
+    <section className="py-24 px-4 relative bg-transparent text-primary-foreground">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
